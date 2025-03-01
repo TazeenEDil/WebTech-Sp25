@@ -1,0 +1,81 @@
+.header{
+    margin-left: 20px;
+    padding: 0.5px;    
+}
+h1{
+    margin-left:200px;
+}
+
+.intro{
+    margin-left: 225px;
+}
+.tazeen{
+    float: left;
+    width: 130px;
+    border-radius: 100px;
+    background-color: rgb(140, 140, 195);
+}
+hr{
+    margin-top: 10px;
+    border: 1px solid black;
+}
+.central{
+    display: flex;
+    justify-content: center;
+    padding-left: 55px;
+    margin-top: 60px;
+    text-align: left;
+    background-color:rgb(153, 153, 214);
+    
+}
+.central .icons a:hover{
+
+background-color: blueviolet    ;}
+.icons{
+
+    display: flex;
+    align-items: baseline;
+    margin: 7px;
+    padding-right: 2px;
+    
+    
+}
+img {
+    vertical-align: baseline;
+    width: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    text-decoration:none;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+.profile{
+    padding-top: 35px;
+}
+.abtme{
+    text-align: justify;
+}
+.educ{
+    margin-bottom: 0.5px;
+    padding:0.5px ;
+}
+
+.skill{
+    margin-bottom: 0.5px;
+    padding:0.5px ;
+}
+
+.projects{
+    margin-bottom: 0.5px;
+    padding:0.5px ;
+    font-weight: 50;
+    font-size:medium;
+}
+
+.add{
+    margin-bottom: 0.5px;
+    padding:0.5px;
+}
