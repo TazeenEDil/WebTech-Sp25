@@ -1,0 +1,41 @@
+body{
+    font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.navbar{
+    background-color: #022844;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5px;
+    color: #fff;
+    font-size: 10px;
+    
+}
+.search-text{
+    text-decoration: none;
+    color: #fff;
+}
+.serach-icon{
+    text-decoration: none;
+    color: #fff;
+}
+.help{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    text-align: center;
+}
+.fas {
+    text-decoration: none;
+    color: #fff;
+}
+#pak{
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 20px;
+    height: 20px;
+    display: block; 
+ 
+}
