@@ -1,41 +1,80 @@
 body{
     font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .navbar{
     background-color: #022844;
+    
     color:white;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 0.5px;
     color: #fff;
-    font-size: 10px;
-    
+    font-size: 12px; 
+    padding: 10px 20px; 
+    font-weight: 40;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 180px;
+    justify-content: baseline;
 }
 .search-text{
     text-decoration: none;
     color: #fff;
+    text-align:center; 
+    
 }
-.serach-icon{
+.search-icon{
     text-decoration: none;
     color: #fff;
+    font-size: medium;
+    font-weight:normal;
+    opacity: 0.75;
 }
 .help{
     text-decoration: none;
     color: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 .header{
-    text-align: center;
+     text-align: center;
+     margin-top: 4%;
 }
-.fas {
+.logo{
+    width: 250px;}
+.cart{
     text-decoration: none;
     color: #fff;
+    padding-left: 1%;
+    font-size: medium;
+}
+.nav-ship{
+    display:flex;
+    align-items: center;
+    gap:5px; 
+    padding:1%  
+}
+.sign-in{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+
 }
 #pak{
     margin-left: 0px;
     padding-left: 0px;
     width: 20px;
-    height: 20px;
     display: block; 
  
+}
+#banner{
+    flex: 1; 
+    text-align: center;
+    font-size: 12px;
+    font-weight: 40;
 }
