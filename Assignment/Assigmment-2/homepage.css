@@ -1,11 +1,10 @@
 body{
     font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
-    margin: 0;
+    margin-top: 0;
     padding: 0;
 }
 .navbar{
     background-color: #022844;
-    
     color:white;
     display:flex;
     align-items: center;
@@ -15,6 +14,12 @@ body{
     padding: 10px 20px; 
     padding-bottom:0px;
     font-weight: 40;
+    position: sticky; 
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+   
 }
 .search-container{
     display: flex;
@@ -43,7 +48,8 @@ body{
 }
 .header{
      text-align: center;
-     margin-top: 4%;
+     position: relative; 
+     margin-top: 60px;
 }
 .logo{
     width: 250px;}
@@ -78,4 +84,38 @@ body{
     text-align: center;
     font-size: 12px;
     font-weight: 40;
+}
+#main-menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 14px;
+    
+}
+#main-menu li{
+    position: relative;
+    padding: 10px 15px;
+}
+#main-menu a {
+    text-decoration: none;
+    color: gray;
+    font-weight: lighter;
+    transition: color 0.3s;
+}
+img{
+    width:30px;
+}
+.has-dropdown{
+    position: relative;
+}
+.dropdown{
+    display: flex;
+    position: absolute;
+    left: -30px;
+    gap:10px;
+    background-color: #fff;
+    display: none;
+}
+.has-dropdown:hover .dropdown{
+    display: block;
 }
