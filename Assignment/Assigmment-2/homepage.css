@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;}
+
 body{
     font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-top: 0;
@@ -113,7 +116,7 @@ img{
     position: absolute;
     left: -30px;
     gap:10px;
-    background-color: #fff;
+    background-color: aqua;
     display: none;
 }
 .has-dropdown:hover .dropdown{
