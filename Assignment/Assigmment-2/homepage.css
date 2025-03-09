@@ -17,11 +17,6 @@ body{
     padding: 10px 20px; 
     padding-bottom:0px;
     font-weight: 40;
-    position: sticky; 
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
    
 }
 .search-container{
@@ -34,7 +29,7 @@ body{
     text-decoration: none;
     color: #fff;
     text-align:center; 
-    
+    position: relative
 }
 .search-icon{
     text-decoration: none;
@@ -42,6 +37,7 @@ body{
     font-size: medium;
     font-weight:normal;
     opacity: 0.75;
+
 }
 .help{
     text-decoration: none;
@@ -88,6 +84,15 @@ body{
     font-size: 12px;
     font-weight: 40;
 }
+.mainmenu{
+    background-color: #fff;
+    position: sticky; 
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+}
 #main-menu{
     display: flex;
     justify-content: center;
@@ -122,3 +127,54 @@ img{
 .has-dropdown:hover .dropdown{
     display: block;
 }
+.join-family {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.join-family h5 {
+    font-style: italic;
+    font-size: 22px;
+    color:#022844;
+    display: block;
+    font-size: 22px;
+    font-style: italic;
+    font-family: Libre Baskerville, Times New Roman, serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.family-convincing {
+    max-width: 600px;
+    margin: 10px auto;
+    font-size: 16px;
+    color: #022844;/* Adjust for readability */
+    line-height: 1.5;
+}
+
+/*.join-family a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #022844;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}*/
+
+.register-btn{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #022844;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 40px;
+
+}
+
