@@ -160,7 +160,7 @@ img{
     max-width: 600px;
     margin: 10px auto;
     font-size: 16px;
-    color: #022844;/* Adjust for readability */
+    color: #022844;
     line-height: 1.5;
 }
 
@@ -252,7 +252,7 @@ img{
 
 .footer-div {
     display: flex;
-    justify-content: space-between; /* Equal spacing between sections */
+    justify-content: space-between; 
     align-items: flex-start;
     width: 100%;
     padding: 30px 50px;
@@ -302,7 +302,7 @@ img{
 }
 
 .store-footer ul {
-    padding-left: 15px; /* Indentation for store locations */
+    padding-left: 15px; 
 }
 
 .follow-footer {
