@@ -5,6 +5,7 @@ body{
     font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-top: 0;
     padding: 0;
+    width: 100%;
 }
 .navbar{
     background-color: #022844;
@@ -13,23 +14,29 @@ body{
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    font-size: 12px; 
-    padding: 10px 20px; 
-    padding-bottom:0px;
-    font-weight: 40;
-   
+    font-size: 8px;
+    width: 100%;
+    letter-spacing:0.01pc ;
+    padding-bottom: -20px;
+    
 }
+
 .search-container{
     display: flex;
     align-items: center;
     gap: 180px;
     justify-content: baseline;
+    background-color: #022844;
+    
+    
 }
 .search-text{
+    margin-left: 10px;
     text-decoration: none;
     color: #fff;
     text-align:center; 
-    position: relative
+    position: relative;
+    background-color: #022844;
 }
 .search-icon{
     text-decoration: none;
@@ -38,17 +45,19 @@ body{
     font-weight:normal;
     opacity: 0.75;
 
+
 }
 .help{
     text-decoration: none;
     color: #fff;
     padding-left: 1%;
     padding-right: 1%;
+    
 }
 .header{
      text-align: center;
      position: relative; 
-     margin-top: 60px;
+     margin-top: 20px;
 }
 .logo{
     width: 250px;}
@@ -57,6 +66,7 @@ body{
     color: #fff;
     padding-left: 1%;
     font-size: medium;
+    margin-right:10px;
 }
 .nav-ship{
     display:flex;
@@ -81,8 +91,8 @@ body{
 #banner{
     flex: 1; 
     text-align: center;
-    font-size: 12px;
-    font-weight: 40;
+    font-size: 8px;
+    font-weight: lighter;
 }
 .mainmenu{
     background-color: #fff;
@@ -91,20 +101,18 @@ body{
     right: 0;
     left: 0;
     z-index: 1000;
-    
+    margin: 10px;
 }
 #main-menu{
     display: flex;
     justify-content: center;
     list-style: none;
     font-size: 10px;
-    letter-spacing: 0.1pc;
-      
+    letter-spacing: 0.1pc;     
 }
 #main-menu li{
     position: relative;
-    padding: 10px 15px;
-    
+    padding: 10px 15px;   
 }
 #main-menu a {
     text-decoration: none;
@@ -168,13 +176,7 @@ img{
 
 }
 
-.homepageimages {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-decoration: none;
-}
+
 
 .top-picture {
     display: flex;
@@ -185,7 +187,49 @@ img{
     object-fit: contain;
     margin-top: -50px;
 }
+.homepageimages {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    max-width: 80%; 
+    margin-left: 100px;
+    
+}
+.three-centre-images{
+    list-style: none;
+    padding: 0;
 
+}
+.centre-images{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    text-decoration: none;
+    margin: 0 5px;
+    
+     
+}
+.centre-images a{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: #022844;
+    
+}
+.centre-images img{
+     width: 70%;
+    height: auto;
+    display: block;
+    
+   
+}
+.centre-images span{
+    margin-top: 20px; 
+    font-size: 13px;
+    font-weight:500; 
+   
+}
 .coat-umbrella-homepage
 {
     display: flex;
@@ -203,6 +247,76 @@ img{
     list-style: none;
     font-size: 10px;
     letter-spacing: 0.1pc;
-      
-    
+         
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between sections */
+    align-items: flex-start;
+    width: 100%;
+    padding: 30px 50px;
+    background-color: #f8f8f8;
+}
+
+.footer-div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0d1c2e;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer hr {
+    width: 35px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #0d1c2e;
+}
+
+.footer ul {
+    margin-top: 10px;
+}
+
+.footer li {
+    font-size: 14px;
+    color: #0d1c2e;
+    margin: 5px 0;
+    display: block;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.store-footer ul {
+    padding-left: 15px; /* Indentation for store locations */
+}
+
+.follow-footer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.follow-footer img {
+    width: 50px;
+    height: auto;
+}
+
+.follow-footer i {
+    font-size: 20px;
+    color: #0d1c2e;
 }
