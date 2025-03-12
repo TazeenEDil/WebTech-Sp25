@@ -245,18 +245,20 @@ img{
     display: flex;
     justify-content: center;
     list-style: none;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.1pc;
+    width: 100%;
          
 }
 
 .footer-div {
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    padding: 30px 50px;
-    background-color: #f8f8f8;
+    padding: 30px 30px;
+    background-color: #fff;
+    margin-top: 20px;
 }
 
 .footer-div ul {
@@ -267,38 +269,39 @@ img{
 
 .footer {
     font-weight: bold;
-    font-size: 16px;
-    color: #0d1c2e;
+    font-size: 11px;
+    color:#022844;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    margin-left: 30px;
 }
 
 .footer hr {
     width: 35px;
+    display: block;
     margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #0d1c2e;
+    margin-left: 0px;
+    margin-bottom: 15px;   
 }
 
 .footer ul {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .footer li {
-    font-size: 14px;
-    color: #0d1c2e;
-    margin: 5px 0;
+    font-size: 7px;
+    color:#022844;
+    margin: 5px 0px;
     display: block;
+    font-weight: 100;
+    padding: 3px;
 }
 
 .footer a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+    
 }
 
 .store-footer ul {
@@ -307,16 +310,21 @@ img{
 
 .follow-footer {
     display: flex;
-    gap: 15px;
-    align-items: center;
+    gap: 3px;
+    
 }
 
-.follow-footer img {
-    width: 50px;
+.kings-trust {
+    
+    margin-top: 70px;
+    display:block;
     height: auto;
 }
-
-.follow-footer i {
-    font-size: 20px;
-    color: #0d1c2e;
+.follow-footer hr{
+    margin-bottom: 120px;
 }
+.follow-footer li{
+    font-size: 20px;
+    color:#022844;    
+}
+
