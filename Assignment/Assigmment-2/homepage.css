@@ -1,3 +1,6 @@
+html{
+    overflow-x: hidden;
+}
 *{
     box-sizing: border-box;}
 
@@ -5,7 +8,7 @@ body{
     font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
     margin-top: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
 }
 .navbar{
     background-color: #022844;
@@ -15,9 +18,13 @@ body{
     justify-content: space-between;
     color: #fff;
     font-size: 8px;
-    width: 100%;
+    width: 100vw;
     letter-spacing:0.01pc ;
     padding-bottom: -20px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
     
 }
 
@@ -176,8 +183,6 @@ img{
 
 }
 
-
-
 .top-picture {
     display: flex;
     justify-content:center ;
@@ -186,6 +191,9 @@ img{
     height: 100vh;
     object-fit: contain;
     margin-top: -50px;
+    position: relative;
+    left: -20px;
+   
 }
 .homepageimages {
     display: flex; 
@@ -239,6 +247,8 @@ img{
     height: 100vh;
     object-fit: contain;
     margin-top: -50px;
+    position: relative;
+    left: -10px;
 }
 #footer-menu{
     background-color: #fff;
