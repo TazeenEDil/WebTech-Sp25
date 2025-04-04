@@ -1,0 +1,190 @@
+body{
+font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 0;
+    padding: 0;
+    width: 100vw;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20vw;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     background-color:rgb(255, 255, 255);
+     width: 100vw;
+     
+}
+.header .logo{
+    width: 20vw;
+    margin-left: 20px;
+    align-items: center;
+}
+.cart{
+    text-decoration: none;
+    color:black;
+    padding-left: 1%;
+    font-size: medium;
+    margin-top:3vw;
+    gap:40px;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    width:100vw;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border: 2px #701b1b;
+    background-color: white;
+    
+}
+#checkoutForm{
+ display: flex;
+ flex-direction: column;
+
+}
+.order-summary{
+    width: 50%;
+    height: auto;
+   margin-top: -240px;
+    border: 3px gray;
+    background-color: gray;
+    position: sticky;
+    padding-left: 30px;
+    padding-top:30px;
+   
+}
+
+input {
+    
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+.checkout-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+.section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button {
+    
+    padding: 10px;
+    background: #022844;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+h5{
+    text-align:left ;
+    color: #022844;
+}
+.section{
+    
+    border: 1.5px solid #022844;
+    text-align: left;
+    font-size: 14px;
+
+}
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio-group label {
+    
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.radio-group label:last-child {
+    border-bottom: none;
+}
+
+.radio-group label:hover {
+    background-color: #98e2ff;
+}
+.Payment {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.Payment {
+    background-color: #eeeeee;
+    border: 1px solid #c6c6c6;
+}
+
+.Payment label {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.Payment input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+.Payment .card-things{
+    display: flex;
+}
+.Payment .card-things #expire{
+    margin-right: 3px;
+}
+
+
+
+.Payment button {
+    width: 100%;
+    padding: 10px;
+    background-color:#022844;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.Payment button:hover {
+    background-color:#022844
+}
