@@ -55,3 +55,4 @@ document.getElementById("checkoutForm").addEventListener("submit", function(even
         event.preventDefault();
     }
 });
+
