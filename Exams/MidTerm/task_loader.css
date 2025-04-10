@@ -1,0 +1,154 @@
+html{
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;}
+
+body{
+    font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 0;
+    padding: 0;
+    width: 100vw;
+}
+.navbar{
+    background-color: #022844;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 8px;
+    width: 100vw;
+    letter-spacing:0.01pc ;
+    padding-bottom: -20px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+
+.search-container{
+    display: flex;
+    align-items: center;
+    gap: 180px;
+    justify-content: baseline;
+    background-color: #022844;
+    
+    
+}
+.search-text{
+    margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align:center; 
+    position: relative;
+    background-color: #022844;
+}
+.search-icon{
+    text-decoration: none;
+    color: #fff;
+    font-size: medium;
+    font-weight:normal;
+    opacity: 0.75;
+
+
+}
+.help{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+}
+.header{
+     text-align: center;
+     position: relative; 
+     margin-top: 20px;
+     margin-bottom: 30px;
+}
+.header .logo{
+    margin-top: 40px;
+    width: 250px;}
+.cart{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1%;
+    font-size: medium;
+    margin-right:10px;
+}
+.nav-ship{
+    display:flex;
+    align-items: center;
+    gap:5px; 
+    padding:1%  
+}
+.sign-in{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+#pak{
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 20px;
+    display: block; 
+ 
+}
+#banner{
+    flex: 1; 
+    text-align: center;
+    font-size: 8px;
+    font-weight: lighter;
+}
+
+  .task-list {
+     margin-top:30px;
+    max-width: 700px;
+    margin: auto;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .task {
+    
+    text-align: center;
+    
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .task h2 {
+    margin: 0;
+    font-size: 16px;
+    align-items: left;
+    color:#5c5959;
+  }
+
+  .task button {
+    padding: 8px 16px;
+    background-color:#022844;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .task button:hover {
+    background-color:#0e4f7d;
+  }
+
+  iframe {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    border-radius: 8px;
+  }

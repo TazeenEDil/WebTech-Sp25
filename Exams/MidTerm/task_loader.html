@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidExamLab</title>
+    <link rel="stylesheet" href="task_loader.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="search-container">
+            <a href="#search-dropdown" class="search-text">SEARCH</a>
+            <a href="#searchbox" class="search-icon"><i class="fas fa-search"></i></a>
+        </div>
+        
+        <p id="banner">COMPLIMENTARY DELIVERY & RETURNS ON ALL ORDERS</p>
+        <div class="nav-ship">
+        <p id="shipto">SHIP TO: </p>
+        <img id="pak" src="images/pakflag.png"></div>
+        <a href="#help"class="help">HELP</a>
+        <a href="#signinform" class="sign-in">SIGN IN</a>
+        <a href="#add-to-cart" class="cart"><i class="fas fa-bag-shopping"></i></a>
+    </div>
+    <div class="header">
+        <img class="logo"src="images/logo.webp">
+    </div>
+
+
+  <div class="task-list">
+    <div class="task">
+      <h2>Assignment 1: CV using HTML & CSS</h2>
+      <button onclick="loadTask('Assignment-1/cv.html')">View</button>
+    </div>
+    <div class="task">
+      <h2>Assignment 2: E-Commerce Landing Page</h2>
+      <button onclick="loadTask('Assigmment-2/homepage.html')">View</button>
+    </div>
+    <div class="task">
+      <h2>Lab Task 1: Landing Page using Bootstrap</h2>
+      <button onclick="loadTask('Lab-Task-1/homepagebs.html')">View</button>
+    </div>
+    <div class="task">
+      <h2>Lab Task 2: Checkout Page with Validation</h2>
+      <button onclick="loadTask('Lab-Task-2/checkout.html')">View</button>
+    </div>
+  </div>
+
+  <iframe id="taskFrame" src="" title="Task Viewer"></iframe>
+    <script src="task_loader.js"></script>
+</body>
+</html>
