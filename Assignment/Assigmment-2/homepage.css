@@ -66,7 +66,8 @@ body{
      position: relative; 
      margin-top: 20px;
 }
-.logo{
+.header .logo{
+    margin-top: 40px;
     width: 250px;}
 .cart{
     text-decoration: none;
@@ -132,7 +133,9 @@ img{
 }
 .has-dropdown{
     position: relative;
+    display: block;
 }
+
 .dropdown{
     display: flex;
     position: absolute;
@@ -141,8 +144,28 @@ img{
     background-color: white;
     display: none;
 }
+.dropdown li{
+    list-style: none;
+    border-bottom: 0.5px solid #ccc;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+.dropdown li .knitwearimage{
+    width: 100px;
+}
 .has-dropdown:hover .dropdown{
     display: block;
+}
+.dropdown img{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    
+}
+.dropdown li .casual-shirts{
+    display: block;
+   margin-left: -20px;
+    margin-top: 200px;
 }
 .join-family {
     text-align: center;
