@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnbull & Asser - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image-container {
+            height: 300px;
+            overflow: hidden;
+        }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+        .product-price {
+            color: #555;
+            font-weight: bold;
+        }
+        .product-details {
+            margin-top: 10px;
+        }
+        .product-tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #1e3a8a;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="products-header">
+            <h1>Men's Shirts</h1>
+            <select>
+                <option>Sort by: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest First</option>
+            </select>
+        </div>
+        <div class="products-grid">
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400" alt="FOREST GREEN MULTI STRIPE WESTMINSTER SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">FOREST GREEN MULTI STRIPE WESTMINSTER SHIRT</h3>
+                    <p class="product-price">RS.130,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Cotton</span><span class="product-tag">Striped</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="GREY AND BLUE PINSTRIPE WESTMINSTER SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">GREY AND BLUE PINSTRIPE WESTMINSTER SHIRT</h3>
+                    <p class="product-price">RS.130,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Cotton</span><span class="product-tag">Pinstripe</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400" alt="PALE BLUE AND NAVY GRID CHECK WESTMINSTER SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">PALE BLUE AND NAVY GRID CHECK WESTMINSTER SHIRT</h3>
+                    <p class="product-price">RS.130,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Cotton</span><span class="product-tag">Check</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CLASSIC WHITE OXFORD SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">CLASSIC WHITE OXFORD SHIRT</h3>
+                    <p class="product-price">RS.125,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Oxford Cotton</span><span class="product-tag">Solid</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="NAVY HERRINGBONE DRESS SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">NAVY HERRINGBONE DRESS SHIRT</h3>
+                    <p class="product-price">RS.135,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Herringbone</span><span class="product-tag">Textured</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="BURGUNDY CHECK FLANNEL SHIRT" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">BURGUNDY CHECK FLANNEL SHIRT</h3>
+                    <p class="product-price">RS.120,000.00</p>
+                    <div class="product-details">
+                        <span class="product-tag">Flannel</span><span class="product-tag">Check</span>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>
