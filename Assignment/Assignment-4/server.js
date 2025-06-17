@@ -5,9 +5,14 @@ const bcrypt = require("bcrypt");
 const loginRoutes = require("./routes/loginRoute");
 const signupRoutes = require("./routes/signupRoute");
 const homepageRoutes = require("./routes/homepageRoute");
+const productspageRoutes= require("./routes/productsRoute");
+const productdetailsRoutes = require("./routes/productdetailsRoute");
+
+
 const path = require('path');
 
 const app = express();
+
 
 // Set EJS as view engine
 app.set("view engine", "ejs");
@@ -45,6 +50,8 @@ mongoose.connect(mongoURI, {
 app.use("/", loginRoutes);
 app.use("/", signupRoutes);
 app.use("/", homepageRoutes);
+app.use("/", productspageRoutes);
+app.use("/", productdetailsRoutes); 
 
 // Start server
 app.listen(3000, () => {

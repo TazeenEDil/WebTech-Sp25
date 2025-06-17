@@ -1,0 +1,261 @@
+body {
+    font-family: Gotham SSm A, Gotham SSm B, HelveticaNeue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .logo {
+    width: 150px;
+    height: auto;
+}
+
+.cart {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    margin-top: 80px;
+    padding: 20px 5%;
+    gap: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+   
+}
+
+.info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.order-summary {
+    position: sticky;
+    top: 10px;
+    width: 50%;
+    border: 0.5px solid #ccc;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#checkoutForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, select {
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 94.3%;
+    font-family: inherit;
+}
+#checkoutForm name[country]{
+    width: 97.3%;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.section {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 12px;
+    background: #022844;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: inherit;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #011c33;
+}
+
+h5 {
+    color: #022844;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.radio-option:last-child {
+    border-bottom: none;
+}
+
+.radio-option:hover {
+    background-color: #f0f8ff;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+}
+
+.checkbox-option {
+    margin: 15px 0;
+}
+
+.checkbox-option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+.Payment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.Payment h5 {
+    margin: 15px 0 10px;
+}
+
+.Payment h5:first-child {
+    margin-top: 0;
+}
+
+.card-things {
+    display: flex;
+    gap: 10px;
+}
+
+.card-things input {
+    flex: 1;
+}
+
+.Payment #cardnumber{
+    width: 94.3%;
+}
+
+.Payment #nameoncard{
+    width: 94.3%;
+}
+.product {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.discount-code {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.discount-code input {
+    flex: 1;
+}
+
+.price-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.total-section {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+    }
+    
+    .order-summary {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        background-color: #f5f5f5;
+    }
+    
+    .header {
+        padding: 15px;
+    }
+}
+
+button type[submit]{
+width:30%;
+padding: 8px;
+}
