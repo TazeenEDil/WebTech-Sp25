@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="/stylesheets/cart.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f6f8fc;
+    }
+    .cart-container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 15px;
+    }
+    .cart-item img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .item-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .quantity-form button {
+      background-color: #022844;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .remove-btn {
+      background-color: #c0392b;
+    }
+    .total {
+      text-align: right;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+
+    <% let total = 0; %>
+    <% cartItems.forEach(item => { %>
+      <div class="cart-item">
+        <img src="<%= item.product.image %>" alt=""/>
+        <div class="item-details">
+          <h3><%= item.product.title %></h3>
+          <p>Price: Rs.<%= item.product.price.toLocaleString() %></p>
+          <p>Size: <%= item.size %></p>
+        </div>
+        <div class="item-actions">
+          <form action="/cart/update" method="POST" class="quantity-form">
+            <input type="hidden" name="productId" value="<%= item.product._id %>">
+            <input type="hidden" name="action" value="decrease">
+            <button type="submit">−</button>
+          </form>
+          <span><%= item.quantity %></span>
+          <form action="/cart/update" method="POST" class="quantity-form">
+            <input type="hidden" name="productId" value="<%= item.product._id %>">
+            <input type="hidden" name="action" value="increase">
+            <button type="submit">+</button>
+          </form>
+          <form action="/cart/remove" method="POST" class="quantity-form">
+            <input type="hidden" name="productId" value="<%= item.product._id %>">
+            <button type="submit" class="remove-btn">Remove</button>
+          </form>
+        </div>
+      </div>
+      <% total += item.product.price * item.quantity; %>
+    <% }) %>
+
+    <div class="total">
+      Total: Rs.<%= total.toLocaleString() %>
+    </div>
+  </div>
+</body>
+</html>
