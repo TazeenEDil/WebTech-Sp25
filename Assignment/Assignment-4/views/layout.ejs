@@ -30,7 +30,13 @@
       <a href="/login" class="sign-in">SIGN IN</a>
     <% } %>
 
-    <a href="/cart" class="cart"><i class="fas fa-bag-shopping"></i></a>
+   <a href="/cart" class="cart-icon">
+  <i class="fas fa-bag-shopping"></i>
+  <% if (cartCount > 0) { %>
+    <span class="cart-badge"><%= cartCount %></span>
+  <% } %>
+</a>
+
   </div>
 
   <!-- Header -->

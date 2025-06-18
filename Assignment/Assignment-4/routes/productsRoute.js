@@ -4,11 +4,11 @@ const bcrypt= require("bcrypt");
 const user= require("../models/user")
 
 
-const Product = require("../models/products"); // add this line
+const Product = require("../models/products");
 
 router.get("/productspage", async function(req, res) {
   try {
-    const products = await Product.find(); // get products from DB
+    const products = await Product.find(); 
     res.render('productspage', { products, user: req.user || null });
   } catch (err) {
     console.error(err);

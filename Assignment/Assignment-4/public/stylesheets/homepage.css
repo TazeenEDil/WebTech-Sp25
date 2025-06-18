@@ -69,13 +69,25 @@ body{
 .header .logo{
     margin-top: 40px;
     width: 250px;}
-.cart{
-    text-decoration: none;
-    color: #fff;
-    padding-left: 1%;
-    font-size: medium;
-    margin-right:10px;
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
+.cart-icon {
+  position: relative;
+  color: white;
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+
+
 .nav-ship{
     display:flex;
     align-items: center;

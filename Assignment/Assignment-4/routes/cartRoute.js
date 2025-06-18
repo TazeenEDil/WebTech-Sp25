@@ -3,13 +3,35 @@ var express = require("express");
 var router = express.Router();
 const requirelogin= require("../middlewares/userMiddleware");
 const Cart = require("../models/cart");
-const Product = require("../models/product");
+const product = require("../models/products");
 
 router.get('/cart', async (req, res) => {
   const userId = req.session.user._id;
   const cart = await Cart.findOne({ userId }).populate('items.product');
   res.render('cart', { cartItems: cart ? cart.items : [] });
 });
+
+router.post('/cart/add', async (req, res) => {
+  const userId = req.session.user._id;
+  const { productId } = req.body;
+
+  let cart = await Cart.findOne({ userId });
+
+  if (!cart) {
+    cart = new Cart({ userId, items: [] });
+  }
+
+  const existingItem = cart.items.find(i => i.product.toString() === productId);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } 
+
+  await cart.save();
+res.redirect('/productspage'); 
+
+});
+
 
 // Update quantity
 router.post('/cart/update', async (req, res) => {
@@ -35,3 +57,5 @@ router.post('/cart/remove', async (req, res) => {
 
   res.redirect('/cart');
 });
+
+module.exports = router;
