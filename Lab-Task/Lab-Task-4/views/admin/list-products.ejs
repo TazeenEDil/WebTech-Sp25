@@ -19,7 +19,7 @@
       <% products.forEach(p => { %>
         <tr>
           <td><%= p.title %></td>
-          <td>$<%= p.price.toFixed(2) %></td>
+          <td>Rs.<%= p.price.toFixed(2) %></td>
           <td>
             <a href="/admin/edit-product/<%= p._id %>" class="btn-secondary">Edit</a>
             <form action="/admin/delete-product/<%= p._id %>" method="POST" style="display:inline;">

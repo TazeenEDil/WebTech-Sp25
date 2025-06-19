@@ -124,6 +124,15 @@
     <div class="total">
       Total: Rs. <%= total.toLocaleString() %>
     </div>
+
+    <div style="text-align: right; margin-top: 20px;">
+  <form action="/checkout" method="GET">
+    <button type="submit" style="background-color: #022844; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; cursor: pointer;">
+      Proceed to Checkout
+    </button>
+  </form>
+</div>
+
   </div>
 </body>
 </html>

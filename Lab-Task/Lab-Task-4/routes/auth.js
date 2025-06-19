@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
   if (match) {
     req.session.isAdmin = true;
     res.redirect('/admin/products');
-    console.log("dfghjk")
+    
   } else {
     res.render('login', { error: 'Invalid credentials' });
   }

@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
+const bcrypt= require("bcrypt");
 const path = require("path");
 
 const loginRoutes = require("./routes/loginRoute");
@@ -13,15 +14,21 @@ const authMiddleware = require("./middlewares/userMiddleware");
 
 const Cart = require('./models/cart');
 const user = require('./models/user');
+const checkoutRoutes = require('./routes/checkout');
+const orderRoutes=require("./routes/orderRoute");
+
 
 const app = express();
 
-// Set EJS as view engine
+
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Middleware to parse form data
+
 app.use(express.urlencoded({ extended: true }));
+
+
 
 // Static files
 app.use(express.static("public"));
@@ -46,7 +53,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// Inject cartCount in all views
+// Inject user and cart count in all views
+app.use((req, res, next) => {
+  res.locals.user = req.session.user || null;
+  next();
+});
+
 app.use(async (req, res, next) => {
   if (req.session.user) {
     try {
@@ -62,6 +74,7 @@ app.use(async (req, res, next) => {
   }
   next();
 });
+
 
 // MongoDB Connection
 const mongoURI = "mongodb+srv://tazeenedil470:iCfOuQOWxJNlt6GX@test-cluster.m1j6glv.mongodb.net/test?retryWrites=true&w=majority&appName=Test-cluster";
@@ -83,7 +96,8 @@ app.use("/", signupRoutes);
 app.use("/", homepageRoutes);
 app.use("/", productspageRoutes);
 app.use("/", authMiddleware, cartpageRoutes);
-
+app.use('/checkout', checkoutRoutes);
+app.use("/", orderRoutes);
 // Start server
 app.listen(3000, () => {
   console.log("Server running on port 3000");

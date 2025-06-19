@@ -22,7 +22,8 @@
               <% }) %>
             </ul>
           </td>
-          <td>$<%= order.totalPrice %></td>
+          <td>Rs.<%= order.totalPrice %></td>
+
           <td><%= order.status %></td>
           <td>
             <form action="/admin/orders/update/<%= order._id %>" method="POST">

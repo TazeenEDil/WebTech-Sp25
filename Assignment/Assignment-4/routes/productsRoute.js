@@ -9,7 +9,7 @@ const Product = require("../models/products");
 router.get("/productspage", async function(req, res) {
   try {
     const products = await Product.find(); 
-    res.render('productspage', { products, user: req.user || null });
+   res.render('productspage', { products });
   } catch (err) {
     console.error(err);
     res.status(500).send("Server Error");

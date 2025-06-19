@@ -11,7 +11,7 @@ router.get('/cart', async (req, res) => {
   res.render('cart', { cartItems: cart ? cart.items : [] });
 });
 
-router.post('/cart/add', async (req, res) => {
+router.post('/cart/add', requirelogin, async (req, res) => {
   const userId = req.session.user._id;
   const { productId } = req.body;
 
@@ -25,11 +25,12 @@ router.post('/cart/add', async (req, res) => {
 
   if (existingItem) {
     existingItem.quantity += 1;
-  } 
+  } else {
+    cart.items.push({ product: productId, quantity: 1 }); 
+  }
 
   await cart.save();
-res.redirect('/productspage'); 
-
+  res.redirect('/productspage');
 });
 
 
@@ -57,5 +58,27 @@ router.post('/cart/remove', async (req, res) => {
 
   res.redirect('/cart');
 });
+
+// GET Checkout Page
+// cartRoute.js
+router.get('/checkout', requirelogin, async (req, res) => {
+  try {
+    const userId = req.session.user._id;
+    const cart = await Cart.findOne({ userId }).populate('items.product');
+
+    if (!cart || cart.items.length === 0) {
+      return res.redirect('/cart');
+    }
+
+    res.render('checkout', {
+      cartItems: cart.items,
+      user: req.session.user,
+    });
+  } catch (err) {
+    console.error('Error fetching cart for checkout:', err);
+    res.redirect('/cart');
+  }
+});
+
 
 module.exports = router;
