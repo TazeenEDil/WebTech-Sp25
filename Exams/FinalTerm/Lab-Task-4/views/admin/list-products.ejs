@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+  <h1 style="color: #022844;">Product Management</h1>
+
+  <div style="text-align: right; margin-bottom: 20px;">
+    <a href="/admin/add-product" class="btn-primary">+ Add New Product</a>
+  </div>
+
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach(p => { %>
+        <tr>
+          <td><%= p.title %></td>
+          <td>Rs.<%= p.price.toFixed(2) %></td>
+          <td>
+            <a href="/admin/edit-product/<%= p._id %>" class="btn-secondary">Edit</a>
+            <form action="/admin/delete-product/<%= p._id %>" method="POST" style="display:inline;">
+              <button class="btn-danger">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>turnbullandasser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   <link rel="stylesheet" href="/stylesheets/homepage.css">
+
+
+</head>
+
+<body>
+    <%- include('layout.ejs') %>
+    
+    
+    <div><a href=""><img  class="top-picture"src="images/top-coats.png"></a></div>
+
+    <div class="homepageimages">
+        <ul class="three-centre-images">
+            <li class="centre-images">
+        <a href=""><img  class="coatsnjackets-homepage" src="images/coatsnjackets.jpg"><span>COATS & JACKETS</span></a>
+        <a href=""><img  class="umbrellas-homepage" src="images/Umbrellas.webp"><span>UMBRELLAS</span></a>
+        <a href=""><img  class="knitwear-homepage" src="images/knitwearhomepage.webp"><span>KNITWEAR</span></a>
+           </li>
+        </ul>
+    </div>
+     <div class="coat-umbrella-link"><a href=""><img  class="coat-umbrella-homepage"src="images/coatumbrellafull.png"></a></div>
+    <div class="join-family">
+        <h5>Join The Turnbull Family</h5>
+        <p class="family-convincing">Be transported to our 57th Street Townhouse store through our inspiring weekly newsletter. Filled with style guidance, product realeases, interviews, and much more.</p>
+        <a class="register-btn" href="/register">REGISTER</a>
+    </div>
+<%- include('footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- checkout.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="/stylesheets/checkout.css">
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT SIDE: USER FORM -->
+    <div class="info">
+      <form method="POST" action="/place-order">
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="firstName" placeholder="First Name" required>
+  <input type="text" name="lastName" placeholder="Last Name" required>
+  <input type="text" name="address" placeholder="Street Address" required>
+  <input type="text" name="apartment" placeholder="Apartment, suite, etc.">
+  <input type="text" name="city" placeholder="City" required>
+  <input type="text" name="postalCode" placeholder="Postal Code">
+  <input type="text" name="phone" placeholder="Phone Number" required>
+
+  <button type="submit" name="paymentOption" value="later">Pay Later</button>
+</form>
+    </div>
+
+    <!-- RIGHT SIDE: ORDER SUMMARY -->
+    <div class="order-summary">
+      <% let subtotal = 0; %>
+      <% cartItems.forEach(item => { %>
+        <% subtotal += item.product.price * item.quantity; %>
+        <div class="product">
+          <img src="<%= item.product.imageUrl %>" alt="<%= item.product.title %>">
+          <div class="details">
+            <p class="title"><strong><%= item.product.title.toUpperCase() %></strong></p>
+            <p class="meta">Qty: <%= item.quantity %></p>
+            <p class="price">Rs <%= (item.product.price * item.quantity).toLocaleString() %></p>
+          </div>
+        </div>
+      <% }) %>
+
+      <div class="discount-code">
+        <input type="text" placeholder="Discount code or gift card">
+        <button>Apply</button>
+      </div>
+
+      <div class="price-detail"><span>Subtotal:</span> <span>Rs <%= subtotal.toLocaleString() %></span></div>
+      <div class="price-detail"><span>Shipping:</span> <span>FREE</span></div>
+      <div class="price-detail"><span>Duties:</span> <span>Rs <%= (subtotal * 0.12).toLocaleString() %></span></div>
+      <div class="price-detail"><span>Taxes:</span> <span>Rs <%= (subtotal * 0.10).toLocaleString() %></span></div>
+
+      <hr>
+
+      <div class="total-section">
+        <span>Total:</span>
+        <span>Rs <%= (subtotal * 1.22).toLocaleString() %></span>
+      </div>
+
+      <p class="savings">TOTAL SAVINGS Rs <%= (subtotal * 0.17).toLocaleString() %></p>
+    </div>
+  </div>
+</body>
+</html>

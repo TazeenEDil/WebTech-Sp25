@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Turnbull & Asser</title>
+  <link rel="stylesheet" href="/stylesheet/homepage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="search-container">
+      <a href="#search-dropdown" class="search-text">SEARCH</a>
+      <a href="#searchbox" class="search-icon"><i class="fas fa-search"></i></a>
+    </div>
+
+    <p id="banner">COMPLIMENTARY DELIVERY & RETURNS ON ALL ORDERS</p>
+
+    <div class="nav-ship">
+      <p id="shipto">SHIP TO: </p>
+      <img id="pak" src="/images/pakflag.png" alt="Pak Flag">
+    </div>
+
+    <a href="#help" class="help">HELP</a>
+
+   <% if (user) { %>
+  <a href="/my-orders" class="sign-in">MY ORDERS</a>
+  <a href="/logout" class="sign-in">LOGOUT</a>
+<% } else { %>
+  <a href="/login" class="sign-in">SIGN IN</a>
+<% } %>
+
+   <a href="/cart" class="cart-icon">
+  <i class="fas fa-bag-shopping"></i>
+  <% if (cartCount > 0) { %>
+    <span class="cart-badge"><%= cartCount %></span>
+  <% } %>
+</a>
+
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <img class="logo" src="/images/logo.webp" alt="Logo">
+  </div>
+  <div class="mainmenu">
+        <ul id="main-menu">
+            <li class="has-dropdown"><a href="">NEW IN</a>
+               <ul class="dropdown">
+                    <li><a href="/productspage">NEW IN</a></li>
+                    <li><a href="/productspage">KNITWEAR</a></li>
+                    <li><a href="/productspage">OVERSHIRTS</a></li>
+                    <li><a href="/productspage">POCKETSQUARES</a></li>
+                    <li><a href="/productspage">NIGHTWEAR</a></li>
+                    <li><a href="/productspage">POLO SHIRTS</a></li>
+                    <div class="newin-images">
+                    <li><a href="/productspage"><img src="images/shirts.webp"></a></li>
+                    <li><a href="/productspage"><img src="images/trousers.jpg"></a></li>
+                    <li><a href="/productspage"><img src="images/ties.webp"></a></li>
+                  </div>  
+                </ul> 
+            </li>
+            <li class="has-dropdown"><a href="">SHIRTS</a>
+                <ul class="dropdown">
+                    <li><a href="/productspage">NEW IN</a></li>
+                    <li><a href="/productspage">MADE TO MEASURE</a></li>
+                    <li><a href="/productspage">WEEKEND FIT SHIRTS</a></li>
+                    <li><a href="/productspage">THE JAMES BOND COLLECTION</a></li>
+                    <li><a href="/productspage">SHIRT ACCESSORIES</a></li>
+                    <li><a href="formal-shirts">FORMAL SHIRTS</a>
+                        <ul class="dropdown">
+                            <li><a href="/productspage">See all Formal Shirts</a></li>
+                            <li><a href="/productspage">Regular Fit Shirts</a></li>
+                            <li><a href="/productspage">Tailored Fit Shirts</a></li>
+                            <li><a href="/productspage">Evening Fit Shirts</a></li>
+                             
+                        </ul>
+                    </li>
+
+                    <li><a class="casual-shirts"href="casual-shirts">CASUAL SHIRTS</a>
+                        <ul class="dropdown">
+                            <li><a href="/productspage">See all Casual Shirts</a></li>
+                            <li><a href="/productspage">Weekend Fit Shirts</a></li>
+                            <li><a href="/productspage">Polo Shirts</a></li>
+                            <li><a href="/productspage">Holiday Fit Shirt</a></li>
+                            <li><a href="/productspage">Overshirts</a></li>
+                        </ul>
+                    </ul>  
+            </li>
+
+            <li class="has-dropdown"><a href="">READY-TO-WEAR</a>
+                <ul class="dropdown">
+                    <li><a href="/productspage">EVENINGWEAR</a></li>
+                    <li><a href="/productspage">TAILORING</a></li>
+                    <li><a href="/productspage">Suits</a></li>
+                    <li><a href="/productspage">Blazers</a></li>
+                    <li><a href="/productspage">Smoking Jackets</a></li>
+                    <li><a href="/productspage">Waistcoats</a></li>
+                    <li><a href="/productspage">TROUSERS</a></li>
+                    <li><a href="/productspage">See All Trousers</a></li>
+                    <li><a href="/productspage">COATS & JACKETS</a></li>
+                    <li><a href="/productspage">Coats & Jackets</a></li>
+                    <li><a href="/productspage">KNITWEAR</a></li>
+                    <li><a href="/productspage">See All Knitwear</a></li>
+                    <li><a href="/productspage">Jumpers</a></li>
+                    <li><a href="/productspage">Vests</a></li>
+                    <li><a href="/productspage">Cardigans</a></li>
+                    <li><a  href="/productspage"><img src="images/knitwear.webp">SHOP KNITWEAR</a></li>
+                </ul> 
+            </li>
+            <li class="has-dropdown"><a href="">ACCESSORIES</a>
+                <ul class="dropdown">
+                    <li><a href="">TIES</a></li>
+                    <li><a href="">See All Ties</a></li>
+                    <li><a href="">Woven Silk Ties</a></li>
+                    <li><a href="">Printed Silk Ties</a></li>
+                    <li><a href="">Knitted Ties</a></li>
+                    <li><a href="">Bow Ties</a></li>
+                    <li><a href="">Seven-Fold Ties</a></li>
+                    <li><a href="">Cravats</a></li>
+                    <li><a href="">POCKET SQUARES</a></li>
+                    <li><a href="">HANDKERCHIEFS</a></li>
+                    <li><a href="">COLLAR STAYS</a></li>
+                    <li><a href="">CUFFLINKS & STUDS</a></li>
+                    <li><a href="">BRACES</a></li>
+                    <li><a href="">CUMMERBUNDS</a></li>
+                    <li><a href="">SILVER ACCESSORIES</a></li>
+                    <li><a href="">SCARVES</a></li>
+                    <li><a href="">See All Scarves</a></li>
+                    <li><a href="">Cashmere Scarves</a></li>
+                    <li><a href="">Silk Scarves</a></li>
+                    <li><a href="">SOCKS</a></li>
+                    <li><a href="">UMBRELLAS</a></li>
+                    <li><a href="">HATS & GLOVES</a></li>
+                    <li><a href="">LEATHER GOODS</a></li>
+                    <li><a href="">FRAGRANCE</a></li>
+                </ul> 
+            </li>
+            <li class="has-dropdown"><a href="">NIGHTWEAR</a>
+                <ul class="dropdown">
+                    <li><a href="">NIGHTWEAR & UNDERWEAR</a></li>
+                    <li><a href="">See All Nightwear & Underwear</a></li>
+                    <li><a href="">Pyjamas</a></li>
+                    <li><a href="">Pyjama Trousers & Shorts</a></li>
+                    <li><a href="">Gowns</a></li>
+                    <li><a href="">Nightshirts</a></li>
+                    <li><a href="">Boxer Shorts</a></li>
+                    <li><a href=""><img src="images/gown.webp">SHOP GOWNS</a></li>
+                    <li><a href=""><img src="images/pyjamas.webp">SHOP PYJAMAS</a></li>
+                    
+                </ul> 
+            </li>
+            <li class="has-dropdown"><a href="">MADE TO MEASURE</a></li>
+
+            <li class="has-dropdown"><a href="">BESPOKE</a>
+                <ul class="dropdown">
+                    <li><a href="">BESPOKE</a></li>
+                    <li><a href="">BY APPOINTMENT</a></li>
+                    
+                </ul> 
+            </li>
+            <li class="has-dropdown"><a href="">INSIDE T&A</a>
+                <ul class="dropdown">
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">THE ROYAL WARRANT</a></li>
+                    <li><a href="">SUSTAINABILITY</a></li>
+                    <li><a href="">OUR SERVICES</a></li>
+                    <li><a href="">ABOUT THE JAMES BOND COLLECTION</a></li>
+                    <li><a href="">ABOUT THE CHURCHILL COLLECTION</a></li>
+                    <li><a href="">UNDERSTANDING OUR SHIRTS</a></li>
+                    <li><a href="">UNDERSTANDING OUR TIES</a></li>
+                    <li><a href="">UNDERSTANDING OUR POCKET SQUARES</a></li>
+                    <li><a href="">THE JAMES BOND COLLECTION</a></li>
+                    <li><a href="">THE CHURCHILL COLLECTION</a></li>
+                    <li><a href="">CURATED BY TURNBULL</a></li>
+                    <li><a href="">AUTUMN/WINTER EDIT</a></li>
+                    <li><a href=""><img src="images/blog.jpg">OFF THE CUFF BLOG</a></li>
+                    
+                </ul> 
+            </li>
+    </div>
+ 
+
+</body>
+</html>

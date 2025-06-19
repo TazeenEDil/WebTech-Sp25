@@ -1,0 +1,146 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f5;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background-color: #022844;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+nav a {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h1, h2 {
+  color: #022844;
+  margin-bottom: 25px;
+}
+
+/* Form Inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Buttons */
+button, .btn {
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #17a2b8;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+table th {
+  background-color: #022844;
+  color: white;
+  text-align: left;
+  padding: 14px;
+  font-size: 15px;
+}
+
+table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Action Links */
+a.btn-link {
+  color: #007BFF;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Messages */
+.error-message {
+  color: #dc3545;
+  background: #ffe2e6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: #28a745;
+  background: #e2f9e1;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}

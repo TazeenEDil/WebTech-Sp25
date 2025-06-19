@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+<div class="container mt-4">
+  <h2>Edit Vehicle</h2>
+  <form action="/admin/edit/<%= vehicle._id %>" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="name" class="form-control" value="<%= vehicle.name %>" required />
+    </div>
+    <div class="form-group">
+      <label>Brand</label>
+      <input type="text" name="brand" class="form-control" value="<%= vehicle.brand %>" required />
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <select name="type" class="form-control" required>
+        <option value="Sedan" <%= vehicle.type === 'Sedan' ? 'selected' : '' %>>Sedan</option>
+        <option value="SUV" <%= vehicle.type === 'SUV' ? 'selected' : '' %>>SUV</option>
+        <option value="Truck" <%= vehicle.type === 'Truck' ? 'selected' : '' %>>Truck</option>
+        <option value="Hatchback" <%= vehicle.type === 'Hatchback' ? 'selected' : '' %>>Hatchback</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" name="price" class="form-control" value="<%= vehicle.price %>" required />
+    </div>
+    <div class="form-group">
+      <label>Current Image</label><br />
+      <% if (vehicle.image) { %>
+        <img src="/uploads/<%= vehicle.image %>" width="100" />
+      <% } else { %>
+        No Image
+      <% } %>
+    </div>
+    <div class="form-group">
+      <label>Change Image</label>
+      <input type="file" name="image" class="form-control-file" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update Vehicle</button>
+  </form>
+</div>
